@@ -5,6 +5,7 @@
     </p>
     <p v-else>No text</p>
     <input type="text" v-model="msg" />
+    <button @click="allDelete()">AllDelete</button>
   </div>
 </template>
 
@@ -14,6 +15,11 @@ export default {
     return {
       msg: "Hello Unko",
     };
+  },
+  methods: {
+    allDelete: function () {
+      this.msg = "";
+    },
   },
 };
 </script>
